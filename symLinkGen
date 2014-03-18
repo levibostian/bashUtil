@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# creates sym link from simply being in directory of execuable and 
+# giving executable:
+# Ex: while inside directory where 'racket' executable exists, 
+# type command:
+# $> symLinkGen racket
+# and sym link: /usr/bin/racket will be generated for you.
+
+EXEC_PATH="$(pwd)/$1"
+
+sudo ln -s $EXEC_PATH /usr/bin/$1
