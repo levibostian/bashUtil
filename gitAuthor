@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if ["$1" == "help"]; then
+    echo "Useage: $0 \"John Doe\" john.doe@gmail.com"
+else
+    git config user.name $1
+    git config user.email $2
+fi
