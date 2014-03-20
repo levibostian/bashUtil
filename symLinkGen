@@ -9,4 +9,12 @@
 
 EXEC_PATH="$(pwd)/$1"
 
-sudo ln -s $EXEC_PATH /usr/bin/$1
+if ["$1" == "-r"]; then
+    sudo rm /usr/bin/$2
+elif ["$1" == "--help"]; then
+    echo "Useage: $0 [options] executableName"
+    echo "options:"
+    echo "  -r : remove symlink"
+else
+    sudo ln -s $EXEC_PATH /usr/bin/$1
+fi
