@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if ["$1" == "help"]; then
-    echo "Useage: $0 \"John Doe\" john.doe@gmail.com"
-else
-    git config user.name $1
+if [[ ! -z "$1" && ! -z "$2" ]]; then
+    git config user.name "$1"
     git config user.email $2
+else
+    echo "Useage: $0 \"John Doe\" john.doe@gmail.com"
 fi
