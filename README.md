@@ -27,6 +27,13 @@ $> gitAuthor "John Doe" john.doe@gmail.com
 ```
 Sets git author settings of repo
 
+### git-local-sweep
+```
+$> cd /directory/of/git/repo
+$> git-local-sweet 
+```
+Deletes all local git branches merged into master (or other branch you wish).
+
 ### ll
 ```
 $> ll

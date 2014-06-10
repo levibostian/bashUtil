@@ -1,0 +1,21 @@
+#!/bin/bash
+
+BRANCH="master"
+BRANCH_DELETE="-d"
+
+if [[ "$1" == "-h" ]]; then
+   echo "Useage: $0 [OPTIONS] [BRANCH]"
+   echo "OPTIONS:"
+   echo "  -D : force delete branches. Default is -d"
+   echo "BRANCH: name of branch merged from. Default is master."
+fi  
+
+if [[ "$1" == "-D" ]]; then 
+   BRANCH_DELETE="-D"
+elif [[ ! -z "$2" ]]; then # other branch then master
+    BRANCH="$2"
+fi
+
+git branch --merged "$BRANCH" | grep -v "\* master" | xargs -n 1 git branch "$BRANCH_DELETE"
+
+   
