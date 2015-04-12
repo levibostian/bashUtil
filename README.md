@@ -13,12 +13,12 @@ options:
 
 ## Scripts:
 
-### symLinkGen
+### ghostUpgrade.sh
 ```
-$> cd /directory/containing/executable/
-$> symLinkGen executableName
+$> cd /directory/of/ghost/install
+$> ghostUpgrade.sh httpsDownloadLinkFromGhostWebsite
 ```
-Creates a symbolic link /usr/bin/executableName
+Upgrades existing Ghost.org blog to newer version.
 
 ### gitAuthor
 ```
@@ -27,12 +27,27 @@ $> gitAuthor "John Doe" john.doe@gmail.com
 ```
 Sets git author settings of repo
 
+### gitHistoryRewrite
+```
+$> cd /directory/of/git/repo
+$> gitHistoryRewrite.sh oldEmail correctName correctEmail
+```
+Changes git repo author history to correctName and correctEmail is author has the oldEmail.
+
 ### git-local-sweep
 ```
 $> cd /directory/of/git/repo
 $> git-local-sweet 
 ```
 Deletes all local git branches merged into master (or other branch you wish).
+
+### gitListAuthors.sh
+```
+$> cd /directory/of/git/repo
+$> gitListAuthors.sh
+Levi Bostian <levi.bostian@gmail.com>
+```
+Lists all contributors of a git repo with name and email.
 
 ### ll
 ```
@@ -48,3 +63,16 @@ drwxr-xr-x  8 levi levi 4.0K Mar 21 12:34 .git
 -rwxr--r--  1 levi levi  511 Mar 21 12:31 symLinkGen
 ```
 Shorthand for: ls -lh
+
+### symLinkGen
+```
+$> cd /directory/containing/executable/
+$> symLinkGen executableName
+```
+Creates a symbolic link /usr/bin/executableName
+
+### wordpress_site_install.sh
+```
+$> wordpress_site_install.sh directoryToInstallSiteTo mysqlUserName
+```
+Installs WordPress website to directoryToInstallSiteTo location.
