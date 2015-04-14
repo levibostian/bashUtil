@@ -11,7 +11,15 @@ options:
   -r : remove symlink
 ```
 
+You probably want to add the directory of bashUtil in your $PATH so that all of the commands are available without specifying your full path. Just an idea. 
+
 ## Scripts:
+
+### badHeroku.sh
+```
+$> badHeroku.sh whatever arguments you want to run
+```
+Unsets $DATABASE_URL and runs command for you. Use if you are running rails app that doesn't use postgresql or Heroku.
 
 ### ghostUpgrade.sh
 ```
