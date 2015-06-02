@@ -57,6 +57,18 @@ Levi Bostian <levi.bostian@gmail.com>
 ```
 Lists all contributors of a git repo with name and email.
 
+### keepup.sh
+```
+$> keepup.sh nameOfProgramHere
+```
+Script to check if process is running. If not, it starts it. 
+Designed to be used as a cron job:
+```
+$> crontab -e
+# type following below to check if rescuetime running every 5 minutes.
+# */5 * * * * /location/of/bashUtil/keepup.sh rescuetime rescuetime
+```
+
 ### ll
 ```
 $> ll
@@ -71,6 +83,12 @@ drwxr-xr-x  8 levi levi 4.0K Mar 21 12:34 .git
 -rwxr--r--  1 levi levi  511 Mar 21 12:31 symLinkGen
 ```
 Shorthand for: ls -lh
+
+### makeExec.sh
+```
+$> makeExec.sh keepup.sh
+```
+Changes permissions of keepup.sh to 775. Used when creating a new bash script.
 
 ### symLinkGen
 ```
