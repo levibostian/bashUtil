@@ -90,6 +90,13 @@ $> makeExec.sh keepup.sh
 ```
 Changes permissions of keepup.sh to 775. Used when creating a new bash script.
 
+### mv-all-files.sh
+```
+$> mv-all-files.sh dir/* newDir/*
+```
+mv dir/* newDir/ <-- this command does not include hidden files inside dir.
+This script allows you to move all files including hidden. 
+
 ### symLinkGen
 ```
 $> cd /directory/containing/executable/
