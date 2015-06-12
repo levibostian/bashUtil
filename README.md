@@ -90,6 +90,12 @@ $> makeExec.sh keepup.sh
 ```
 Changes permissions of keepup.sh to 775. Used when creating a new bash script.
 
+### merge-into-master.sh
+```
+&> merge-into-master.sh branch-name -d
+```
+Merges git branch 'branch-name' into master and deletes branch after merge if '-d' set as second argument.
+
 ### mv-all-files.sh
 ```
 $> mv-all-files.sh dir/* newDir/*
