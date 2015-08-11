@@ -21,6 +21,18 @@ $> badHeroku.sh whatever arguments you want to run
 ```
 Unsets $DATABASE_URL and runs command for you. Use if you are running rails app that doesn't use postgresql or Heroku.
 
+### disableNetworking.sh
+```
+$> disableNetworking.sh
+```
+Disables networking. Works on Ubuntu based distros of Linux.  
+
+### enableNetworking.sh
+```
+$> enableNetworking.sh
+```
+Enables networking. Works on Ubunut based distros of Linux. 
+
 ### ghostUpgrade.sh
 ```
 $> cd /directory/of/ghost/install
@@ -34,6 +46,7 @@ $> cd /directory/of/git/repo
 $> gitAuthor "John Doe" john.doe@gmail.com
 ```
 Sets git author settings of repo
+
 
 ### gitHistoryRewrite
 ```
