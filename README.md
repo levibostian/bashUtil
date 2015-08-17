@@ -47,6 +47,15 @@ $> gitAuthor "John Doe" john.doe@gmail.com
 ```
 Sets git author settings of repo
 
+### gitForgetAllFromGitignore.sh
+```
+$> cd /directory/of/git/repo
+$> gitForgetAllFromGitignore.sh
+```
+When you have a git repo that you add a bunch of different files to and then
+later in the future you decide to add a .gitignore that now ignores files 
+that were previously tracked by git. Instead of `git rm --cached <file>` 
+every single file individually, just run this script to go through them all.
 
 ### gitHistoryRewrite
 ```
