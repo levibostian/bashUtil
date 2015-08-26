@@ -33,6 +33,12 @@ $> enableNetworking.sh
 ```
 Enables networking. Works on Ubunut based distros of Linux. 
 
+### fileTypesInDir.sh
+```
+$> fileTypesInDir.sh
+```
+Lists all the different file extensions in the directory you are in.
+
 ### ghostUpgrade.sh
 ```
 $> cd /directory/of/ghost/install
