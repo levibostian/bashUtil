@@ -15,6 +15,15 @@ You probably want to add the directory of bashUtil in your $PATH so that all of 
 
 ## Scripts:
 
+### android-build-install.sh
+
+Compiles development debug version of app, installs to device, and brings Android Studio to focus after done if using macOS.
+
+```
+$> cd /path/to/androidStudioProject/
+$> android-build-install
+```
+
 ### badHeroku.sh
 ```
 $> badHeroku.sh whatever arguments you want to run
